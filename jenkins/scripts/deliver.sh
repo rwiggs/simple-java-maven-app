@@ -19,3 +19,5 @@ echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 MYAPP=$(echo ${NAME}-${VERSION}.jar | tr -d [:blank:][:cntrl:]'\r\n'| sed 's/\[0m//g')
 java -jar target/${MYAPP}
+
+echo "This is NEW BRANCH"
