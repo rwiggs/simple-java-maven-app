@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 echo 'The following Maven command installs your Maven-built Java application'
@@ -17,5 +18,7 @@ VERSION=`mvn help:evaluate -Dexpression=project.version | grep "^[^\[]" | sed 's
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 MYAPP="${NAME}-${VERSION}.jar"
+echo ${MYAPP}
+ls target/
 pwd
 #java -jar target/${NAME}-${VERSION}.jar
