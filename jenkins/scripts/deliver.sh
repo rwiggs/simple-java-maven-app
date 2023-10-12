@@ -20,4 +20,4 @@ MYAPP="${NAME}-${VERSION}.jar"
 
 pwd
 ls target/my-app-1.0-SNAPSHOT.jar
-java -jar my-app-1.0-SNAPSHOT.jar
+java -jar target/my-app-1.0-SNAPSHOT.jar
