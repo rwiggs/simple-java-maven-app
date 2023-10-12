@@ -16,6 +16,5 @@ VERSION=`mvn help:evaluate -Dexpression=project.version | grep "^[^\[]" | sed 's
 
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
-MYAPP=$(echo ${NAME}-${VERSION}.jar | tr -d '\n\r')
-
+MYAPP=$(echo ${NAME}-${VERSION}.jar | tr -d [:blank:] | sed 's/\[0m//g')
 java -jar target/${MYAPP}
