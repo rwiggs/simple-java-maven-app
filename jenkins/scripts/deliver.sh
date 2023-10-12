@@ -17,7 +17,7 @@ set +x
 echo 'The following complex command behaves similarly to the previous one but'
 echo 'extracts the value of the <version/> element within <project/> instead.'
 set -x
-VERSION=`mvn help:evaluate -Dexpression=project.version | grep "^[^\[]"`
+VERSION=`mvn help:evaluate -Dexpression=project.version | grep "^[^\[]" | sed 's/ //g'`
 set +x
 
 echo 'The following command runs and outputs the execution of your Java'
