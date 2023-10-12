@@ -21,4 +21,4 @@ MYAPP="${NAME}-${VERSION}.jar"
 echo ${MYAPP}
 ls target/
 pwd
-#java -jar target/${NAME}-${VERSION}.jar
+java -jar target/${MYAPP}
