@@ -19,4 +19,5 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 MYAPP="${NAME}-${VERSION}.jar"
 
 pwd
-ls target/
+ls target/my-app-1.0-SNAPSHOT.jar
+java -jar my-app-1.0-SNAPSHOT.jar
