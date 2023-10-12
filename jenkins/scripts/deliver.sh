@@ -8,6 +8,7 @@ mvn jar:jar install:install help:evaluate -Dexpression=project.name
 
 echo 'The following complex command extracts the value of the <name/> element'
 echo 'within <project/> of your Java/Maven project''s "pom.xml" file.'
+mvn help:evaluate -Dexpression=project.name | grep "^[^\[]"
 NAME=`mvn help:evaluate -Dexpression=project.name | grep "^[^\[]"`
 
 echo 'The following complex command behaves similarly to the previous one but'
